@@ -3,262 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>LocalGrownAI | AI Marketing for Local Businesses</title>
-
-<meta name="description" content="LocalGrownAI gives local businesses an always-on AI marketing team without the cost of hiring one.">
+<meta name="description" content="AI-powered marketing that helps local businesses get seen, stay consistent, and grow.">
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:#06140d;
+color:#fff;
+line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:22px 7%;
+border-bottom:1px solid rgba(255,255,255,.08);
+position:sticky;
+top:0;
+background:rgba(6,20,13,.94);
+backdrop-filter:blur(12px);
+z-index:10;
 }
 
-html {
-  scroll-behavior: smooth;
+.logo{font-size:24px;font-weight:800}
+.logo span{color:#62d878}
+
+nav{display:flex;gap:28px;align-items:center}
+nav a{color:#c7d3cc;font-size:14px}
+nav a:hover{color:#62d878}
+
+.btn{
+display:inline-block;
+background:#62d878;
+color:#041009;
+padding:14px 25px;
+border-radius:12px;
+font-weight:800;
+border:none;
+cursor:pointer;
+}
+.btn:hover{transform:translateY(-2px)}
+
+.hero{
+text-align:center;
+padding:100px 7% 80px;
+max-width:1000px;
+margin:auto;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #06140d;
-  color: #ffffff;
-  line-height: 1.6;
+.badge{
+display:inline-block;
+border:1px solid rgba(98,216,120,.35);
+color:#62d878;
+padding:7px 14px;
+border-radius:30px;
+font-size:13px;
+margin-bottom:25px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h1{
+font-size:clamp(46px,8vw,82px);
+line-height:1.02;
+letter-spacing:-3px;
+margin-bottom:25px;
 }
 
-.container {
-  width: min(1100px, 90%);
-  margin: auto;
+h1 span{color:#62d878}
+
+.hero p{
+font-size:20px;
+color:#b7c5bc;
+max-width:680px;
+margin:0 auto 35px;
 }
 
-header {
-  padding: 24px 0;
-  border-bottom: 1px solid rgba(255,255,255,.08);
+.buttons{display:flex;gap:15px;justify-content:center;flex-wrap:wrap}
+
+.btn-outline{
+border:1px solid rgba(255,255,255,.2);
+padding:14px 25px;
+border-radius:12px;
+color:#fff;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+section{padding:80px 7%;max-width:1150px;margin:auto}
+
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:42px;margin-bottom:10px}
+.section-title p{color:#9eafa4}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
-.logo {
-  font-size: 26px;
-  font-weight: 800;
+.card{
+background:#0b2116;
+border:1px solid rgba(98,216,120,.14);
+border-radius:20px;
+padding:30px;
 }
 
-.logo span {
-  color: #62d875;
+.icon{font-size:30px;margin-bottom:15px}
+.card h3{font-size:21px;margin-bottom:10px}
+.card p{color:#aebdb4}
+
+.pricing{
+max-width:600px;
+margin:auto;
+background:#0b2116;
+border:1px solid rgba(98,216,120,.3);
+border-radius:24px;
+padding:45px;
+text-align:center;
 }
 
-.nav-links {
-  display: flex;
-  gap: 30px;
-  color: #b8c7bf;
+.price{
+font-size:70px;
+font-weight:800;
+line-height:1;
+margin:15px 0;
 }
 
-.hero {
-  text-align: center;
-  padding: 110px 0 90px;
-  background:
-    radial-gradient(circle at 50% 20%, rgba(54,180,91,.18), transparent 38%);
+.price small{font-size:18px;color:#9eafa4;font-weight:400}
+
+.pricing p{color:#b7c5bc;margin-bottom:25px}
+
+.features{
+text-align:left;
+margin:25px 0;
 }
 
-.badge {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid #31854b;
-  border-radius: 40px;
-  color: #72df87;
-  font-size: 14px;
-  letter-spacing: 1px;
-  margin-bottom: 30px;
+.features div{
+padding:9px 0;
+color:#c9d5ce;
 }
 
-h1 {
-  font-size: clamp(48px, 8vw, 88px);
-  line-height: .98;
-  letter-spacing: -4px;
-  margin-bottom: 30px;
+.features div:before{
+content:"✓";
+color:#62d878;
+font-weight:800;
+margin-right:12px;
 }
 
-.green {
-  color: #62d875;
+.cta{
+text-align:center;
+background:#0b2116;
+border-radius:25px;
+border:1px solid rgba(98,216,120,.15);
+padding:70px 25px;
 }
 
-.hero p {
-  max-width: 720px;
-  margin: auto;
-  color: #b8c7bf;
-  font-size: 21px;
+.cta h2{font-size:44px;margin-bottom:15px}
+.cta p{color:#aebdb4;margin-bottom:30px}
+
+footer{
+text-align:center;
+padding:40px 7%;
+color:#718078;
+border-top:1px solid rgba(255,255,255,.08);
 }
 
-.button {
-  display: inline-block;
-  margin-top: 38px;
-  padding: 18px 34px;
-  border-radius: 14px;
-  background: #62d875;
-  color: #06140d;
-  font-weight: 800;
-  font-size: 18px;
-  transition: .2s;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-  background: #78e889;
-}
-
-section {
-  padding: 90px 0;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 44px;
-  margin-bottom: 15px;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #9fb1a7;
-  max-width: 650px;
-  margin: 0 auto 55px;
-  font-size: 18px;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.card {
-  background: #0a2116;
-  border: 1px solid rgba(98,216,117,.18);
-  border-radius: 22px;
-  padding: 30px;
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  font-size: 22px;
-}
-
-.card p {
-  color: #9fb1a7;
-}
-
-.icon {
-  font-size: 32px;
-  margin-bottom: 18px;
-}
-
-.pricing {
-  max-width: 620px;
-  margin: auto;
-  background: #0a2116;
-  border: 1px solid rgba(98,216,117,.3);
-  border-radius: 28px;
-  padding: 50px 35px;
-  text-align: center;
-}
-
-.plan {
-  color: #72df87;
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.price {
-  font-size: 76px;
-  font-weight: 800;
-  line-height: 1;
-  margin: 20px 0;
-}
-
-.price small {
-  font-size: 18px;
-  color: #9fb1a7;
-  font-weight: 400;
-}
-
-.pricing p {
-  color: #b8c7bf;
-  margin-bottom: 30px;
-}
-
-.features-list {
-  list-style: none;
-  text-align: left;
-  margin: 30px 0;
-}
-
-.features-list li {
-  padding: 10px 0;
-  color: #c5d1ca;
-}
-
-.features-list li::before {
-  content: "✓";
-  color: #62d875;
-  font-weight: bold;
-  margin-right: 12px;
-}
-
-.cta {
-  text-align: center;
-  background: #0a2116;
-}
-
-.cta h2 {
-  font-size: 46px;
-  margin-bottom: 15px;
-}
-
-.cta p {
-  color: #aebdb4;
-  max-width: 600px;
-  margin: auto;
-}
-
-footer {
-  padding: 35px 0;
-  text-align: center;
-  color: #718279;
-  border-top: 1px solid rgba(255,255,255,.08);
-}
-
-@media (max-width: 750px) {
-  .nav-links {
-    display: none;
-  }
-
-  .hero {
-    padding: 80px 0 70px;
-  }
-
-  h1 {
-    letter-spacing: -2px;
-  }
-
-  .features {
-    grid-template-columns: 1fr;
-  }
-
-  .section-title {
-    font-size: 36px;
-  }
-
-  .price {
-    font-size: 62px;
-  }
+@media(max-width:750px){
+nav{display:none}
+.grid{grid-template-columns:1fr}
+.hero{padding-top:75px}
+.pricing{padding:30px 22px}
+.price{font-size:58px}
 }
 </style>
 </head>
@@ -266,174 +183,129 @@ footer {
 <body>
 
 <header>
-  <div class="container nav">
-    <div class="logo">LocalGrown<span>AI</span></div>
-
-    <nav class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#start">Get Started</a>
-    </nav>
-  </div>
+<div class="logo">LocalGrown<span>AI</span></div>
+<nav>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Get Started</a>
+</nav>
+<a class="btn" href="#pricing">Grow My Business</a>
 </header>
 
 <main>
 
 <section class="hero">
-  <div class="container">
+<div class="badge">AI-POWERED LOCAL MARKETING</div>
 
-    <div class="badge">AI-POWERED LOCAL BUSINESS GROWTH</div>
+<h1>
+Turn Local Attention<br>
+Into <span>Real Growth.</span>
+</h1>
 
-    <h1>
-      Grow your business.<br>
-      <span class="green">Let AI handle the marketing.</span>
-    </h1>
+<p>
+LocalGrownAI helps local businesses stay visible, consistent,
+and competitive with AI-powered marketing.
+</p>
 
-    <p>
-      LocalGrownAI gives local businesses an always-on AI marketing team —
-      without the cost of hiring one.
-    </p>
-
-    <a class="button" href="#pricing">
-      Start Growing →
-    </a>
-
-  </div>
+<div class="buttons">
+<a class="btn" href="#pricing">Start Growing</a>
+<a class="btn-outline" href="#services">See What We Do</a>
+</div>
 </section>
 
-<section id="features">
-  <div class="container">
+<section id="services">
+<div class="section-title">
+<h2>Marketing. Automated.</h2>
+<p>Everything your local business needs to stay in front of customers.</p>
+</div>
 
-    <h2 class="section-title">Your AI Marketing Team</h2>
+<div class="grid">
 
-    <p class="section-subtitle">
-      Consistent marketing designed to help local businesses stay visible,
-      build trust and generate more customers.
-    </p>
+<div class="card">
+<div class="icon">📱</div>
+<h3>Social Media</h3>
+<p>AI-created content designed to keep your business active and visible.</p>
+</div>
 
-    <div class="features">
+<div class="card">
+<div class="icon">🚀</div>
+<h3>Promotions</h3>
+<p>Campaign ideas and promotional content built around your business.</p>
+</div>
 
-      <div class="card">
-        <div class="icon">📱</div>
-        <h3>Social Media</h3>
-        <p>
-          Consistent social content designed around your business,
-          customers and local market.
-        </p>
-      </div>
+<div class="card">
+<div class="icon">⭐</div>
+<h3>Reputation</h3>
+<p>Professional review-response drafts that help protect your reputation.</p>
+</div>
 
-      <div class="card">
-        <div class="icon">⭐</div>
-        <h3>Reputation</h3>
-        <p>
-          Professional review response drafts that help you maintain
-          a strong online reputation.
-        </p>
-      </div>
+<div class="card">
+<div class="icon">📍</div>
+<h3>Local Visibility</h3>
+<p>Content designed to help your business stay relevant to local customers.</p>
+</div>
 
-      <div class="card">
-        <div class="icon">📈</div>
-        <h3>Marketing Campaigns</h3>
-        <p>
-          Promotional campaigns and marketing ideas designed to keep
-          your business growing.
-        </p>
-      </div>
+<div class="card">
+<div class="icon">✉️</div>
+<h3>Email & SMS</h3>
+<p>Marketing campaigns that keep existing customers coming back.</p>
+</div>
 
-      <div class="card">
-        <div class="icon">🔎</div>
-        <h3>Google Business</h3>
-        <p>
-          Regular content ideas for your Google Business presence
-          to help keep your profile active.
-        </p>
-      </div>
+<div class="card">
+<div class="icon">📊</div>
+<h3>Monthly Reports</h3>
+<p>Simple reporting that shows what your marketing is accomplishing.</p>
+</div>
 
-      <div class="card">
-        <div class="icon">✉️</div>
-        <h3>Email & SMS</h3>
-        <p>
-          Customer communication campaigns designed to bring customers
-          back and increase repeat business.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📊</div>
-        <h3>Monthly Reports</h3>
-        <p>
-          Simple marketing reports showing what was created,
-          what happened and what to focus on next.
-        </p>
-      </div>
-
-    </div>
-  </div>
+</div>
 </section>
 
 <section id="pricing">
-  <div class="container">
+<div class="section-title">
+<h2>Simple Monthly Pricing</h2>
+<p>No complicated packages. Just consistent marketing.</p>
+</div>
 
-    <h2 class="section-title">Simple Monthly Pricing</h2>
+<div class="pricing">
+<h3>Growth</h3>
 
-    <p class="section-subtitle">
-      One simple plan. No complicated marketing agency contracts.
-    </p>
+<div class="price">$299 <small>/ month</small></div>
 
-    <div class="pricing">
+<p>
+Everything you need to keep your local business
+marketing consistently.
+</p>
 
-      <div class="plan">GROWTH</div>
+<div class="features">
+<div>12 social media posts</div>
+<div>4 promotional campaigns</div>
+<div>Google Business posts</div>
+<div>Review response drafts</div>
+<div>Email & SMS campaigns</div>
+<div>Monthly marketing report</div>
+</div>
 
-      <div class="price">
-        $299 <small>/ month</small>
-      </div>
-
-      <p>
-        Everything you need to keep your local business
-        marketing consistently.
-      </p>
-
-      <ul class="features-list">
-        <li>12 social media posts</li>
-        <li>4 promotional campaigns</li>
-        <li>Google Business posts</li>
-        <li>Review response drafts</li>
-        <li>Email & SMS campaigns</li>
-        <li>Monthly marketing report</li>
-      </ul>
-
-      <a class="button" href="#start">
-        Get Started
-      </a>
-
-    </div>
-  </div>
+<a class="btn" href="#contact">Get Started</a>
+</div>
 </section>
 
-<section id="start" class="cta">
+<section id="contact">
+<div class="cta">
+<h2>Ready to Grow?</h2>
+<p>
+Let AI handle the marketing while you focus on running your business.
+</p>
 
-  <div class="container">
-
-    <h2>Ready to grow?</h2>
-
-    <p>
-      Give your business an AI-powered marketing team
-      without adding another employee to your payroll.
-    </p>
-
-    <a class="button"
-       href="mailto:hello@localgrownai.com?subject=I%20Want%20To%20Grow%20My%20Business">
-       Start Growing →
-    </a>
-
-  </div>
-
+<a class="btn" href="mailto:hello@localgrownai.com">
+Start Growing
+</a>
+</div>
 </section>
 
 </main>
 
 <footer>
-  © 2026 LocalGrownAI. AI-powered marketing for local businesses.
+LocalGrownAI © 2026 · AI-Powered Marketing for Local Businesses
 </footer>
 
 </body>
