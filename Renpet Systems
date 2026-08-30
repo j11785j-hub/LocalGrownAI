@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Renpet Systems | AI-Powered Growth Systems</title>
+
+  <meta
+    name="description"
+    content="Renpet Systems builds AI-powered growth systems that help businesses operate smarter, reach more customers, and grow with less friction."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --navy: #08111f;
+      --navy-2: #0d1a2d;
+      --blue: #1769ff;
+      --blue-light: #4b8dff;
+      --cyan: #55c7ff;
+      --white: #ffffff;
+      --off-white: #f6f9fc;
+      --gray-50: #f8fafc;
+      --gray-100: #eef2f7;
+      --gray-200: #dce3ec;
+      --gray-400: #8996a8;
+      --gray-500: #647286;
+      --gray-700: #344054;
+      --shadow: 0 25px 70px rgba(8, 17, 31, 0.12);
+      --radius: 22px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--navy);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(8, 17, 31, 0.06);
+    }
+
+    .nav-inner {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.04em;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--blue), #0b43b7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 15px;
+      font-weight: 800;
+      box-shadow: 0 8px 22px rgba(23, 105, 255, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gray-700);
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 20px;
+      border-radius: 10px;
+      background: var(--navy);
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--blue);
+      transform: translateY(-1px);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      position: relative;
+      min-height: 760px;
+      padding-top: 76px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 82% 25%, rgba(23, 105, 255, 0.12), transparent 28%),
+        radial-gradient(circle at 15% 85%, rgba(85, 199, 255, 0.08), transparent 25%),
+        linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(8,17,31,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(8,17,31,0.025) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: linear-gradient(to bottom, black, transparent);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 58%;
+      padding: 80px 0 100px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 12px;
+      border: 1px solid rgba(23, 105, 255, 0.16);
+      border-radius: 999px;
+      background: rgba(23, 105, 255, 0.05);
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 0 5px rgba(23, 105, 255, 0.09);
+    }
+
+    .hero h1 {
+      font-size: clamp(52px, 6.2vw, 82px);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+      font-weight: 800;
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+    }
+
+    .hero-subtitle {
+      max-width: 610px;
+      color: var(--gray-500);
+      font-size: 19px;
+      line-height: 1.75;
+      margin-bottom: 38px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      transition: all 0.25s ease;
+    }
+
+    .primary-btn {
+      color: white;
+      background: var(--blue);
+      box-shadow: 0 14px 32px rgba(23, 105, 255, 0.24);
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #0759ed;
+      box-shadow: 0 18px 38px rgba(23, 105, 255, 0.3);
+    }
+
+    .secondary-btn {
+      color: var(--navy);
+      background: white;
+      border: 1px solid var(--gray-200);
+    }
+
+    .secondary-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .hero-note {
+      margin-top: 22px;
+      color: var(--gray-400);
+      font-size: 12px;
+    }
+
+    /* Hero visual */
+
+    .hero-visual {
+      position: absolute;
+      right: -40px;
+      top: 50%;
+      transform: translateY(-43%);
+      width: 48%;
+      max-width: 620px;
+      z-index: 2;
+    }
+
+    .dashboard {
+      position: relative;
+      padding: 18px;
+      border: 1px solid rgba(8,17,31,0.1);
+      border-radius: 24px;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 35px 90px rgba(8,17,31,0.15);
+      transform: perspective(1200px) rotateY(-7deg) rotateX(2deg);
+    }
+
+    .dashboard-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3px 4px 17px;
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .window-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gray-200);
+    }
+
+    .dashboard-label {
+      font-size: 10px;
+      color: var(--gray-400);
+      font-weight: 600;
+    }
+
+    .dashboard-body {
+      border-radius: 17px;
+      background: var(--gray-50);
+      padding: 20px;
+    }
+
+    .metric-row {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .metric-card {
+      padding: 17px;
+      border: 1px solid var(--gray-100);
+      border-radius: 14px;
+      background: white;
+    }
+
+    .metric-title {
+      font-size: 10px;
+      color: var(--gray-400);
+      margin-bottom: 7px;
+    }
+
+    .metric-number {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+    }
+
+    .metric-change {
+      color: #16834b;
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .chart-card {
+      min-height: 215px;
+      padding: 18px;
+      border: 1px solid var(--gray-100);
+      border-radius: 14px;
+      background: white;
+    }
+
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .chart-title {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .chart-period {
+      font-size: 10px;
+      color: var(--gray-400);
+    }
+
+    .chart {
+      height: 145px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--gray-100);
+      background-image:
+        linear-gradient(rgba(8,17,31,0.035) 1px, transparent 1px);
+      background-size: 100% 35px;
+    }
+
+    .chart svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .chart-line {
+      fill: none;
+      stroke: var(--blue);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .chart-area {
+      fill: rgba(23,105,255,0.08);
+    }
+
+    .ai-card {
+      margin-top: 12px;
+      padding: 16px;
+      border-radius: 14px;
+      background: var(--navy);
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .ai-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: var(--cyan);
+    }
+
+    .ai-copy strong {
+      display: block;
+      font-size: 11px;
+      margin-bottom: 3px;
+    }
+
+    .ai-copy span {
+      display: block;
+      color: rgba(255,255,255,0.6);
+      font-size: 9px;
+    }
+
+    /* =========================
+       TRUST STRIP
+    ========================= */
+
+    .trust-strip {
+      border-top: 1px solid var(--gray-100);
+      border-bottom: 1px solid var(--gray-100);
+      background: white;
+    }
+
+    .trust-inner {
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .trust-copy {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .trust-items {
+      display: flex;
+      align-items: center;
+      gap: 45px;
+      color: var(--gray-400);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .section {
+      padding: 120px 0;
+    }
+
+    .section-light {
+      background: var(--off-white);
+    }
+
+    .section-header {
+      max-width: 720px;
+      margin-bottom: 58px;
+    }
+
+    .section-label {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: clamp(36px, 4.5vw, 58px);
+      line-height: 1.06;
+      letter-spacing: -0.055em;
+      margin-bottom: 20px;
+    }
+
+    .section-description {
+      color: var(--gray-500);
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      position: relative;
+      min-height: 330px;
+      padding: 32px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      background: white;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(23,105,255,0.25);
+      box-shadow: var(--shadow);
+    }
+
+    .service-number {
+      position: absolute;
+      top: 25px;
+      right: 27px;
+      font-size: 12px;
+      color: var(--gray-400);
+      font-weight: 700;
+    }
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(23,105,255,0.08);
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .service-card h3 {
+      font-size: 21px;
+      letter-spacing: -0.035em;
+      margin-bottom: 13px;
+    }
+
+    .service-card p {
+      color: var(--gray-500);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       SYSTEMS SECTION
+    ========================= */
+
+    .systems {
+      background: var(--navy);
+      color: white;
+      overflow: hidden;
+    }
+
+    .systems-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: 90px;
+    }
+
+    .systems .section-label {
+      color: var(--cyan);
+    }
+
+    .systems .section-title {
+      color: white;
+    }
+
+    .systems .section-description {
+      color: rgba(255,255,255,0.62);
+    }
+
+    .systems-list {
+      margin-top: 35px;
+      display: grid;
+      gap: 15px;
+    }
+
+    .system-item {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      padding: 17px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .check {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      border-radius: 50%;
+      background: rgba(85,199,255,0.12);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .system-item strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .system-item span {
+      color: rgba(255,255,255,0.5);
+      font-size: 12px;
+    }
+
+    .systems-visual {
+      position: relative;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .orb {
+      position: absolute;
+      width: 430px;
+      height: 430px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 30%, rgba(85,199,255,0.5), transparent 25%),
+        radial-gradient(circle at 60% 60%, rgba(23,105,255,0.7), transparent 45%),
+        rgba(23,105,255,0.08);
+      filter: blur(1px);
+      box-shadow:
+        0 0 100px rgba(23,105,255,0.22),
+        inset 0 0 80px rgba(85,199,255,0.12);
+    }
+
+    .system-dashboard {
+      position: relative;
+      z-index: 2;
+      width: 88%;
+      padding: 25px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(22px);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    }
+
+    .system-dashboard h4 {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .flow {
+      display: grid;
+      gap: 10px;
+    }
+
+    .flow-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      padding: 15px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .flow-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: rgba(85,199,255,0.12);
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .flow-item strong {
+      font-size: 11px;
+      display: block;
+    }
+
+    .flow-item span {
+      color: rgba(255,255,255,0.45);
+      font-size: 9px;
+    }
+
+    .flow-arrow {
+      text-align: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 12px;
+    }
+
+    /* =========================
+       PROCESS
+    ========================= */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: white;
+    }
+
+    .process-step {
+      padding: 34px 28px;
+      border-right: 1px solid var(--gray-200);
+    }
+
+    .process-step:last-child {
+      border-right: none;
+    }
+
+    .process-num {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 42px;
+    }
+
+    .process-step h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      letter-spacing: -0.03em;
+    }
+
+    .process-step p {
+      color: var(--gray-500);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 110px 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(85,199,255,0.17), transparent 35%),
+        var(--navy);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cta .section-label {
+      color: var(--cyan);
+    }
+
+    .cta h2 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1;
+      letter-spacing: -0.06em;
+      margin-bottom: 24px;
+    }
+
+    .cta p {
+      max-width: 590px;
+      margin: 0 auto 34px;
+      color: rgba(255,255,255,0.6);
+      font-size: 17px;
+    }
+
+    .cta .primary-btn {
+      background: white;
+      color: var(--navy);
+      box-shadow: none;
+    }
+
+    .cta .primary-btn:hover {
+      background: var(--cyan);
+      color: var(--navy);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #050c16;
+      color: white;
+      padding: 38px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .footer-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+    }
+
+    .footer-copy {
+      color: rgba(255,255,255,0.35);
+      font-size: 11px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 25px;
+      color: rgba(255,255,255,0.55);
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 1000px) {
+      .hero {
+        min-height: auto;
+        padding-bottom: 70px;
+      }
+
+      .hero-content {
+        width: 100%;
+        padding: 80px 0 30px;
+      }
+
+      .hero-visual {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        max-width: 680px;
+        margin: 35px auto 0;
+      }
+
+      .dashboard {
+        transform: none;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .systems-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      .systems-visual {
+        min-height: 420px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .process-step:nth-child(2) {
+        border-right: none;
+      }
+
+      .process-step:nth-child(-n+2) {
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .trust-items {
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .nav-inner {
+        height: 68px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        padding: 10px 15px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding-top: 68px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .primary-btn,
+      .secondary-btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        width: 105%;
+        margin-left: -2.5%;
+      }
+
+      .metric-row {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-row .metric-card:not(:first-child) {
+        display: none;
+      }
+
+      .trust-inner {
+        padding: 25px 0;
+        display: block;
+        text-align: center;
+      }
+
+      .trust-items {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        gap: 15px 25px;
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        font-size: 40px;
+      }
+
+      .service-card {
+        min-height: auto;
+      }
+
+      .systems-visual {
+        min-height: 350px;
+      }
+
+      .orb {
+        width: 300px;
+        height: 300px;
+      }
+
+      .system-dashboard {
+        width: 100%;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-step {
+        border-right: none;
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .process-step:last-child {
+        border-bottom: none;
+      }
+
+      .process-num {
+        margin-bottom: 22px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#" class="logo">
+        <div class="logo-mark">R</div>
+        <span>RENPET SYSTEMS</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#solutions">Solutions</a>
+        <a href="#systems">Systems</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a href="signup.html" class="nav-cta">
+        Get Started
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-grid"></div>
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          AI-Powered Growth Systems
+        </div>
+
+        <h1>
+          Turn intelligence into
+          <span>growth.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Renpet Systems builds intelligent systems that help businesses
+          attract customers, automate repetitive work, and turn better
+          decisions into measurable growth.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="signup.html" class="primary-btn">
+            Start Growing
+            <span>→</span>
+          </a>
+
+          <a href="#solutions" class="secondary-btn">
+            Explore Solutions
+          </a>
+
+        </div>
+
+        <p class="hero-note">
+          Built for businesses ready to work smarter.
+        </p>
+
+      </div>
+
+
+      <!-- Dashboard visual -->
+
+      <div class="hero-visual">
+
+        <div class="dashboard">
+
+          <div class="dashboard-top">
+
+            <div class="window-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="dashboard-label">
+              RENPET GROWTH SYSTEM
+            </div>
+
+          </div>
+
+          <div class="dashboard-body">
+
+            <div class="metric-row">
+
+              <div class="metric-card">
+                <div class="metric-title">
+                  Growth Score
+                </div>
+
+                <div class="metric-number">
+                  84%
+                </div>
+
+                <div class="metric-change">
+                  +18.4% this month
+                </div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-title">
+                  Leads
+                </div>
+
+                <div class="metric-number">
+                  247
+                </div>
+
+                <div class="metric-change">
+                  +31%
+                </div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-title">
+                  Conversion
+                </div>
+
+                <div class="metric-number">
+                  8.7%
+                </div>
+
+                <div class="metric-change">
+                  +2.1%
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="chart-card">
+
+              <div class="chart-header">
+
+                <div class="chart-title">
+                  Growth Performance
+                </div>
+
+                <div class="chart-period">
+                  Last 30 days
+                </div>
+
+              </div>
+
+              <div class="chart">
+
+                <svg
+                  viewBox="0 0 600 145"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+
+                  <path
+                    class="chart-area"
+                    d="M0,125
+                       C45,119 55,110 85,116
+                       C120,123 130,92 165,98
+                       C205,105 218,80 250,86
+                       C280,92 302,70 330,74
+                       C360,79 378,51 410,60
+                       C440,68 460,35 490,42
+                       C520,50 545,18 600,12
+                       L600,145
+                       L0,145 Z"
+                  />
+
+                  <path
+                    class="chart-line"
+                    d="M0,125
+                       C45,119 55,110 85,116
+                       C120,123 130,92 165,98
+                       C205,105 218,80 250,86
+                       C280,92 302,70 330,74
+                       C360,79 378,51 410,60
+                       C440,68 460,35 490,42
+                       C520,50 545,18 600,12"
+                  />
+
+                </svg>
+
+              </div>
+
+            </div>
+
+
+            <div class="ai-card">
+
+              <div class="ai-icon">
+                AI
+              </div>
+
+              <div class="ai-copy">
+
+                <strong>
+                  Growth opportunity detected
+                </strong>
+
+                <span>
+                  Renpet identified 3 high-impact opportunities.
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       TRUST STRIP
+  ========================= -->
+
+  <section class="trust-strip">
+
+    <div class="container trust-inner">
+
+      <div class="trust-copy">
+        Built around measurable growth
+      </div>
+
+      <div class="trust-items">
+        <span>AI</span>
+        <span>AUTOMATION</span>
+        <span>MARKETING</span>
+        <span>DATA</span>
+        <span>GROWTH</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SOLUTIONS
+  ========================= -->
+
+  <section class="section" id="solutions">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          What We Build
+        </div>
+
+        <h2 class="section-title">
+          Technology that works for the business.
+        </h2>
+
+        <p class="section-description">
+          We combine artificial intelligence, automation, marketing,
+          and business intelligence into practical systems designed
+          to create more opportunities and eliminate unnecessary work.
+        </p>
+
+      </div>
+
+
+      <div class="services-grid">
+
+        <div class="service-card">
+
+          <div class="service-number">
+            01
+          </div>
+
+          <div class="service-icon">
+            AI
+          </div>
+
+          <h3>
+            Intelligent Marketing
+          </h3>
+
+          <p>
+            Use AI to create better content, identify opportunities,
+            understand customers, and keep your business visible
+            without constantly doing everything manually.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-number">
+            02
+          </div>
+
+          <div class="service-icon">
+            ↗
+          </div>
+
+          <h3>
+            Growth Systems
+          </h3>
+
+          <p>
+            Build repeatable systems for generating leads, following
+            up with prospects, improving conversion, and creating
+            consistent customer growth.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-number">
+            03
+          </div>
+
+          <div class="service-icon">
+            ⚙
+          </div>
+
+          <h3>
+            Smart Automation
+          </h3>
+
+          <p>
+            Automate repetitive processes so your team can spend less
+            time on administrative work and more time on the things
+            that actually move the business forward.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SYSTEMS
+  ========================= -->
+
+  <section class="section systems" id="systems">
+
+    <div class="container systems-layout">
+
+      <div>
+
+        <div class="section-label">
+          The Renpet Approach
+        </div>
+
+        <h2 class="section-title">
+          Don't just add AI.
+          Build a system around it.
+        </h2>
+
+        <p class="section-description">
+          AI is powerful on its own. It becomes transformative when
+          it's connected to the right processes, information, and
+          business goals.
+        </p>
+
+
+        <div class="systems-list">
+
+          <div class="system-item">
+
+            <div class="check">✓</div>
+
+            <div>
+              <strong>Identify opportunities</strong>
+              <span>Find where technology can create the biggest impact.</span>
+            </div>
+
+          </div>
+
+
+          <div class="system-item">
+
+            <div class="check">✓</div>
+
+            <div>
+              <strong>Build intelligent workflows</strong>
+              <span>Connect AI and automation to real business processes.</span>
+            </div>
+
+          </div>
+
+
+          <div class="system-item">
+
+            <div class="check">✓</div>
+
+            <div>
+              <strong>Measure what matters</strong>
+              <span>Track the outcomes that actually affect growth.</span>
+            </div>
+
+          </div>
+
+
+          <div class="system-item">
+
+            <div class="check">✓</div>
+
+            <div>
+              <strong>Continuously improve</strong>
+              <span>Use data and intelligence to make the system better over time.</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="systems-visual">
+
+        <div class="orb"></div>
+
+        <div class="system-dashboard">
+
+          <h4>
+            Business Intelligence Flow
+          </h4>
+
+          <div class="flow">
+
+            <div class="flow-item">
+
+              <div class="flow-icon">
+                01
+              </div>
+
+              <div>
+                <strong>Business Data</strong>
+                <span>Collect and organize information</span>
+              </div>
+
+            </div>
+
+            <div class="flow-arrow">
+              ↓
+            </div>
+
+            <div class="flow-item">
+
+              <div class="flow-icon">
+                AI
+              </div>
+
+              <div>
+                <strong>Intelligence Layer</strong>
+                <span>Analyze, predict, and identify opportunities</span>
+              </div>
+
+            </div>
+
+            <div class="flow-arrow">
+              ↓
+            </div>
+
+            <div class="flow-item">
+
+              <div class="flow-icon">
+                ⚙
+              </div>
+
+              <div>
+                <strong>Automation</strong>
+                <span>Turn intelligence into action</span>
+              </div>
+
+            </div>
+
+            <div class="flow-arrow">
+              ↓
+            </div>
+
+            <div class="flow-item">
+
+              <div class="flow-icon">
+                ↗
+              </div>
+
+              <div>
+                <strong>Growth</strong>
+                <span>More customers. Better efficiency. Better decisions.</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROCESS
+  ========================= -->
+
+  <section class="section section-light" id="process">
+
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="section-label">
+          How It Works
+        </div>
+
+        <h2 class="section-title">
+          From opportunity to outcome.
+        </h2>
+
+        <p class="section-description">
+          A straightforward process designed to find the highest-value
+          opportunities and turn them into systems that deliver.
+        </p>
+
+      </div>
+
+
+      <div class="process-grid">
+
+        <div class="process-step">
+
+          <div class="process-num">
+            01 / DISCOVER
+          </div>
+
+          <h3>
+            Understand
+          </h3>
+
+          <p>
+            We learn how your business operates, where growth is coming
+            from, and where opportunities are being missed.
+          </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+          <div class="process-num">
+            02 / DESIGN
+          </div>
+
+          <h3>
+            Strategize
+          </h3>
+
+          <p>
+            We identify the highest-impact AI, automation, and marketing
+            opportunities and design the right system around them.
+          </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+          <div class="process-num">
+            03 / BUILD
+          </div>
+
+          <h3>
+            Implement
+          </h3>
+
+          <p>
+            We build and connect the workflows, tools, automations,
+            and intelligence your business needs.
+          </p>
+
+        </div>
+
+
+        <div class="process-step">
+
+          <div class="process-num">
+            04 / GROW
+          </div>
+
+          <h3>
+            Optimize
+          </h3>
+
+          <p>
+            We measure performance, find new opportunities, and improve
+            the system as your business grows.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CTA
+  ========================= -->
+
+  <section class="cta" id="contact">
+
+    <div class="container cta-inner">
+
+      <div class="section-label">
+        Ready to Build Smarter?
+      </div>
+
+      <h2>
+        Make your intelligence work harder.
+      </h2>
+
+      <p>
+        Tell us about your business and we'll identify where AI,
+        automation, and smarter systems can create real growth.
+      </p>
+
+      <a href="signup.html" class="primary-btn">
+        Start Growing
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+
+        <div class="footer-mark">
+          R
+        </div>
+
+        <span>
+          RENPET SYSTEMS
+        </span>
+
+      </div>
+
+      <div class="footer-copy">
+        © 2026 Renpet Systems. All rights reserved.
+      </div>
+
+      <div class="footer-links">
+        <a href="#solutions">Solutions</a>
+        <a href="#systems">Systems</a>
+        <a href="signup.html">Contact</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
